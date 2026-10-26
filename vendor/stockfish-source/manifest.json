@@ -1,0 +1,51 @@
+{
+  "name": "Stockfish.js corresponding source",
+  "version": "19.0.1",
+  "variant": "Stockfish 19 Lite single-threaded WebAssembly",
+  "upstream": "https://github.com/nmrugg/stockfish.js",
+  "tag": "v19.0.1",
+  "commit": "0d5dd7944f88c817c07a26bc4fb1905d5f9c46d6",
+  "archiveRoot": "stockfish.js-0d5dd7944f88c817c07a26bc4fb1905d5f9c46d6",
+  "retrieved": "2026-10-26",
+  "files": [
+    {
+      "path": "stockfish.js-v19.0.1.tar.gz",
+      "source": "https://codeload.github.com/nmrugg/stockfish.js/tar.gz/0d5dd7944f88c817c07a26bc4fb1905d5f9c46d6",
+      "bytes": 426352,
+      "sha256": "e5289a920554bf0069a6601c228e81d957c00522bb31c4343588dc5d7d251879"
+    },
+    {
+      "path": "nn-61e7af4bb97d.nnue",
+      "source": "https://tests.stockfishchess.org/api/nn/nn-61e7af4bb97d.nnue",
+      "bytes": 1166381,
+      "sha256": "61e7af4bb97d51eeeb25d322916f86513b5cd3a827ce189c98c6e31946f99e5b"
+    },
+    {
+      "path": "CC0-1.0.txt",
+      "source": "https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt",
+      "bytes": 7048,
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+    }
+  ],
+  "distributedBinaries": [
+    {
+      "path": "vendor/stockfish/stockfish-19-lite-single.js",
+      "sha256": "ccb130d7ff29408531c47d859a49f91d59d4f482d05a53eb1a3231a4f624c91a"
+    },
+    {
+      "path": "vendor/stockfish/stockfish-19-lite-single.wasm",
+      "sha256": "ee4f115bdb2d32cadf96cada104a05b5ec257d7ad6f57582190b49bc71f096de"
+    }
+  ],
+  "build": {
+    "command": "node build.js --single-threaded --lite --strict-em-check -f",
+    "emscripten": "6.0.9",
+    "terser": "5.51.2",
+    "networkDestination": "src/nn-61e7af4bb97d.nnue",
+    "locallyRecompiled": false
+  },
+  "networkLicense": {
+    "spdx": "CC0-1.0",
+    "uploadTerms": "https://github.com/official-stockfish/fishtest/blob/5a8a229a521b4eaab2ecf19b92f0d2fd6c3be13b/server/fishtest/templates/nn_upload.html.j2"
+  }
+}

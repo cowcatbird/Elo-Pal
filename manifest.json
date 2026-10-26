@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Elo Pal",
+  "short_name": "Elo Pal",
+  "version": "1.8.0",
+  "author": "cowcatbird",
+  "description": "Review Chess.com and Lichess games privately with local Stockfish, move grades, and Coach Cat. Import PGN or FEN for free.",
+  "minimum_chrome_version": "102",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "icons": {
+    "16": "assets/icon-16.png",
+    "32": "assets/icon-32.png",
+    "48": "assets/icon-48.png",
+    "128": "assets/icon-128.png"
+  },
+  "action": {
+    "default_title": "Import this Chess.com or Lichess game into Elo Pal",
+    "default_icon": {
+      "16": "assets/icon-16.png",
+      "32": "assets/icon-32.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'none'; base-uri 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self'"
+  }
+}

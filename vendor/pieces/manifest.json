@@ -1,0 +1,133 @@
+{
+  "set": "Cburnett",
+  "author": "Colin M. L. Burnett",
+  "license": "GPL-2.0-or-later",
+  "repository": "https://github.com/lichess-org/lila",
+  "commit": "5b44d719ec5913dd62aa965f4b8d21e60a00c2c1",
+  "importedOn": "2026-10-26",
+  "modifications": "None to SVG content. Upstream filenames mapped to lowercase.",
+  "files": [
+    {
+      "upstreamFile": "wK.svg",
+      "upstreamPath": "public/piece/cburnett/wK.svg",
+      "sourceUrl": "https://raw.githubusercontent.com/lichess-org/lila/5b44d719ec5913dd62aa965f4b8d21e60a00c2c1/public/piece/cburnett/wK.svg",
+      "installedPath": "assets/pieces/wk.svg",
+      "bytes": 642,
+      "sha256": "09837f1f99dae2d05c2a0bfb5ce0fb9f37a95b124de44f428a08ae18d7b7c557",
+      "modified": false
+    },
+    {
+      "upstreamFile": "wQ.svg",
+      "upstreamPath": "public/piece/cburnett/wQ.svg",
+      "sourceUrl": "https://raw.githubusercontent.com/lichess-org/lila/5b44d719ec5913dd62aa965f4b8d21e60a00c2c1/public/piece/cburnett/wQ.svg",
+      "installedPath": "assets/pieces/wq.svg",
+      "bytes": 827,
+      "sha256": "9c0a960b360e08cea48eedab54e852107145de289b81a82fe27942045e2ab665",
+      "modified": false
+    },
+    {
+      "upstreamFile": "wR.svg",
+      "upstreamPath": "public/piece/cburnett/wR.svg",
+      "sourceUrl": "https://raw.githubusercontent.com/lichess-org/lila/5b44d719ec5913dd62aa965f4b8d21e60a00c2c1/public/piece/cburnett/wR.svg",
+      "installedPath": "assets/pieces/wr.svg",
+      "bytes": 531,
+      "sha256": "05746153e11de3ff4a43d6725f704e226e5d5b49c6ff170ed598d3e9883f2cd5",
+      "modified": false
+    },
+    {
+      "upstreamFile": "wB.svg",
+      "upstreamPath": "public/piece/cburnett/wB.svg",
+      "sourceUrl": "https://raw.githubusercontent.com/lichess-org/lila/5b44d719ec5913dd62aa965f4b8d21e60a00c2c1/public/piece/cburnett/wB.svg",
+      "installedPath": "assets/pieces/wb.svg",
+      "bytes": 755,
+      "sha256": "8bf4f38cc170686775f81158934301942b07e3f1162e76c6305e76d66aaa0910",
+      "modified": false
+    },
+    {
+      "upstreamFile": "wN.svg",
+      "upstreamPath": "public/piece/cburnett/wN.svg",
+      "sourceUrl": "https://raw.githubusercontent.com/lichess-org/lila/5b44d719ec5913dd62aa965f4b8d21e60a00c2c1/public/piece/cburnett/wN.svg",
+      "installedPath": "assets/pieces/wn.svg",
+      "bytes": 648,
+      "sha256": "43d8bed9cd40836335072a20f52d30237e6e2cbe304ffb13e258fa1d576c156a",
+      "modified": false
+    },
+    {
+      "upstreamFile": "wP.svg",
+      "upstreamPath": "public/piece/cburnett/wP.svg",
+      "sourceUrl": "https://raw.githubusercontent.com/lichess-org/lila/5b44d719ec5913dd62aa965f4b8d21e60a00c2c1/public/piece/cburnett/wP.svg",
+      "installedPath": "assets/pieces/wp.svg",
+      "bytes": 455,
+      "sha256": "a8bd79f344ea69a577cdd7b11cbab7bbebfc157cce01c6d29b8f2edf1c44068e",
+      "modified": false
+    },
+    {
+      "upstreamFile": "bK.svg",
+      "upstreamPath": "public/piece/cburnett/bK.svg",
+      "sourceUrl": "https://raw.githubusercontent.com/lichess-org/lila/5b44d719ec5913dd62aa965f4b8d21e60a00c2c1/public/piece/cburnett/bK.svg",
+      "installedPath": "assets/pieces/bk.svg",
+      "bytes": 815,
+      "sha256": "2dc3caba39a67a707ebc27f4e41b727dd5252f4f49da695fc15cc2589dd92a47",
+      "modified": false
+    },
+    {
+      "upstreamFile": "bQ.svg",
+      "upstreamPath": "public/piece/cburnett/bQ.svg",
+      "sourceUrl": "https://raw.githubusercontent.com/lichess-org/lila/5b44d719ec5913dd62aa965f4b8d21e60a00c2c1/public/piece/cburnett/bQ.svg",
+      "installedPath": "assets/pieces/bq.svg",
+      "bytes": 965,
+      "sha256": "2d0162d1fe776ac5a4d307d4f6e5960804273edc0d3743f1c97a158f5a64c4b1",
+      "modified": false
+    },
+    {
+      "upstreamFile": "bR.svg",
+      "upstreamPath": "public/piece/cburnett/bR.svg",
+      "sourceUrl": "https://raw.githubusercontent.com/lichess-org/lila/5b44d719ec5913dd62aa965f4b8d21e60a00c2c1/public/piece/cburnett/bR.svg",
+      "installedPath": "assets/pieces/br.svg",
+      "bytes": 612,
+      "sha256": "5928b86919ae815f5d35dea8a25f5a84c3f8839468a137e429d42f618185cbcd",
+      "modified": false
+    },
+    {
+      "upstreamFile": "bB.svg",
+      "upstreamPath": "public/piece/cburnett/bB.svg",
+      "sourceUrl": "https://raw.githubusercontent.com/lichess-org/lila/5b44d719ec5913dd62aa965f4b8d21e60a00c2c1/public/piece/cburnett/bB.svg",
+      "installedPath": "assets/pieces/bb.svg",
+      "bytes": 738,
+      "sha256": "48ff9dba84dae861b1a81ac58f4647e05cee8a827acad1618bf11beaedcce60d",
+      "modified": false
+    },
+    {
+      "upstreamFile": "bN.svg",
+      "upstreamPath": "public/piece/cburnett/bN.svg",
+      "sourceUrl": "https://raw.githubusercontent.com/lichess-org/lila/5b44d719ec5913dd62aa965f4b8d21e60a00c2c1/public/piece/cburnett/bN.svg",
+      "installedPath": "assets/pieces/bn.svg",
+      "bytes": 837,
+      "sha256": "72e1565fbc9024015dcb6ee28d918c876523119f6f552c0a40d3118c13a67e13",
+      "modified": false
+    },
+    {
+      "upstreamFile": "bP.svg",
+      "upstreamPath": "public/piece/cburnett/bP.svg",
+      "sourceUrl": "https://raw.githubusercontent.com/lichess-org/lila/5b44d719ec5913dd62aa965f4b8d21e60a00c2c1/public/piece/cburnett/bP.svg",
+      "installedPath": "assets/pieces/bp.svg",
+      "bytes": 353,
+      "sha256": "93e11e46deceff0768211a28df3e39c6d3427aa172bdb5e3928b025bd2858587",
+      "modified": false
+    }
+  ],
+  "licenses": [
+    {
+      "installedPath": "vendor/pieces/UPSTREAM_COPYING.md",
+      "sourceUrl": "https://raw.githubusercontent.com/lichess-org/lila/5b44d719ec5913dd62aa965f4b8d21e60a00c2c1/COPYING.md",
+      "bytes": 11180,
+      "sha256": "ad0355db9ccd9ec049120945b356ff40c7c868d719a961732868bd5f5306cbba"
+    },
+    {
+      "installedPath": "vendor/pieces/GPL-2.0.txt",
+      "sourceUrl": "https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt",
+      "bytes": 17984,
+      "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6"
+    }
+  ]
+}

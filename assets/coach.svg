@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="112" viewBox="0 0 96 112" role="img" aria-label="Coach Rowan, a friendly chess coach with glasses and a green sweater">
+  <path d="M11 112V96c0-15 15-24 37-24s37 9 37 24v16Z" fill="#86a768"/>
+  <path d="M17 112V99c0-8 3-14 9-18l8 31Zm62 0V99c0-8-3-14-9-18l-8 31Z" fill="#6b8d54"/>
+  <path d="M38 69h20v16c-5 6-15 6-20 0Z" fill="#d8aa80"/>
+  <path d="m33 77 15 9-10 13-11-17Zm30 0-15 9 10 13 11-17Z" fill="#edf0d2"/>
+  <path d="M43 88h10l-2 24h-6Z" fill="#324f3b"/>
+  <ellipse cx="25" cy="47" rx="6" ry="9" fill="#dfb68d"/>
+  <ellipse cx="71" cy="47" rx="6" ry="9" fill="#dfb68d"/>
+  <path d="M22 33c0-20 11-29 27-29 18 0 27 12 25 32l-5 16H28Z" fill="#514a3d"/>
+  <path d="M26 34c0-15 10-23 22-23s22 8 22 23v20c0 18-10 28-22 28S26 72 26 54Z" fill="#edc8a0"/>
+  <path d="M24 36c-3-14 5-29 23-30 12-1 25 8 27 20-9-2-14-6-18-11-5 10-16 15-32 15Z" fill="#514a3d"/>
+  <path d="M27 33c-3 8-3 17 0 24l4-4-1-19Zm42 0c3 8 3 17 0 24l-4-4 1-19Z" fill="#c6bda6"/>
+  <path d="M29 58c3 5 7 4 10 1 6-4 12-4 18 0 3 3 7 4 10-1-2 16-10 24-19 24S31 74 29 58Z" fill="#eee6cd"/>
+  <path d="M34 58c6 0 8-4 14-4s8 4 14 4c-2 6-8 8-14 4-6 4-12 2-14-4Z" fill="#ded4b9"/>
+  <path d="M42 65q6 5 12 0" fill="none" stroke="#7d513d" stroke-width="2.1" stroke-linecap="round"/>
+  <path d="m47 46-2 8h5" fill="none" stroke="#c29470" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M32 36q5-3 10-1m12 0q5-2 10 1" fill="none" stroke="#756c58" stroke-width="3" stroke-linecap="round"/>
+  <g fill="none" stroke="#314d3c" stroke-width="2.4">
+    <rect x="29" y="40" width="17" height="13" rx="5"/>
+    <rect x="50" y="40" width="17" height="13" rx="5"/>
+    <path d="M46 44q2-2 4 0M26 43h3m38 0h3"/>
+  </g>
+  <ellipse cx="38" cy="46" rx="2" ry="2.6" fill="#403b30"/>
+  <ellipse cx="58" cy="46" rx="2" ry="2.6" fill="#403b30"/>
+  <circle cx="38.7" cy="45.2" r=".7" fill="#fff7e5"/>
+  <circle cx="58.7" cy="45.2" r=".7" fill="#fff7e5"/>
+  <path d="M64 98h9v9h-9Z" fill="#4c6d40"/>
+  <path d="M65 96h2v2h1v-2h1v2h1v-2h2v4l-1 1 1 4h-7l1-4-1-1Z" fill="#d9e8b0"/>
+  <path d="M16 109q12-8 23-6l19 4-1 5H18Z" fill="#78995d"/>
+  <path d="M57 107c5-3 10-3 14-1l5 3-1 3H57Z" fill="#edc8a0"/>
+</svg>

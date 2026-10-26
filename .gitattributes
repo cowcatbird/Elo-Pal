@@ -1,0 +1,20 @@
+* text=auto eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.json text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.svg text eol=lf
+*.tsv text eol=lf
+*.png binary
+*.wasm binary
+*.nnue binary
+*.gz binary
+*.zip binary
+# Preserve upstream bytes used by provenance checksums on every platform.
+vendor/** -text
+assets/pieces/*.svg -text

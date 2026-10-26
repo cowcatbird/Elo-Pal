@@ -1,0 +1,32 @@
+{
+  "name": "elo-pal",
+  "version": "1.8.0",
+  "private": true,
+  "description": "A private, offline Chrome extension for chess game review.",
+  "author": "cowcatbird",
+  "homepage": "https://github.com/cowcatbird/elo-pal#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cowcatbird/elo-pal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cowcatbird/elo-pal/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "type": "module",
+  "license": "GPL-3.0-only",
+  "scripts": {
+    "vendor": "node scripts/vendor.mjs",
+    "start": "node scripts/serve.mjs",
+    "package": "node scripts/package.mjs",
+    "test": "node --test tests/*.test.js tests/*.test.mjs",
+    "test:engine": "node --test tests/engine.test.mjs",
+    "test:smoke": "node scripts/engine-smoke.mjs"
+  },
+  "dependencies": {
+    "chess.js": "1.4.0",
+    "stockfish": "19.0.1"
+  }
+}

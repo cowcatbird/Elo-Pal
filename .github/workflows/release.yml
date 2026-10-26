@@ -1,0 +1,83 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*.*.*']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Verify and build release
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Require a release commit on main
+        run: git merge-base --is-ancestor "$GITHUB_SHA" origin/main
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Install locked dependencies without lifecycle scripts
+        run: npm ci --ignore-scripts
+      - name: Validate the tag, versions, and bundled sources
+        run: node .github/scripts/validate-release.mjs "$GITHUB_REF_NAME"
+      - name: Run tests
+        run: npm test
+      - name: Exercise the bundled Stockfish engine
+        run: npm run test:smoke
+      - name: Build the extension ZIP
+        run: npm run package
+      - name: Record the release checksum
+        working-directory: dist
+        run: sha256sum elo-pal.zip > SHA256SUMS
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: release-assets
+          path: |
+            dist/elo-pal.zip
+            dist/SHA256SUMS
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 0
+
+  publish:
+    name: Publish GitHub release
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: release-assets
+          path: dist
+      - name: Verify the downloaded asset
+        working-directory: dist
+        run: sha256sum --check SHA256SUMS
+      - name: Create the release with installation instructions
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          cat > "$RUNNER_TEMP/release-notes.md" <<'EOF'
+          Download **elo-pal.zip**, extract it, then open `chrome://extensions`, enable **Developer mode**, and select **Load unpacked** with the extracted folder containing `manifest.json`.
+
+          To update, replace the files in your existing unpacked extension folder, click **Reload** on its extension card, and refresh open Elo Pal tabs.
+
+          Analysis runs locally. The ZIP includes the engine, licenses, attribution, and corresponding Stockfish source under `vendor/stockfish-source/`. `SHA256SUMS` contains the ZIP's SHA-256 checksum. See the repository README for usage, privacy details, and development instructions.
+          EOF
+          gh release create "$RELEASE_TAG" dist/elo-pal.zip dist/SHA256SUMS \
+            --verify-tag --title "Elo Pal ${RELEASE_TAG#v}" \
+            --notes-file "$RUNNER_TEMP/release-notes.md" --generate-notes

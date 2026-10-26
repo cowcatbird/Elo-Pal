@@ -1,0 +1,47 @@
+name: Bug report
+description: Report a problem with Elo Pal.
+title: '[Bug] '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please search existing issues first. Remove private game details, account information, tokens, and unrelated browser content from screenshots and logs. For a security vulnerability, follow SECURITY.md instead of opening a public issue.
+  - type: input
+    id: version
+    attributes:
+      label: Elo Pal version
+      description: Find it on Elo Pal's extension card in chrome://extensions.
+      placeholder: 1.8.0
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and operating system
+      placeholder: Chrome 130 on Windows 11
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include the selected move and analysis setting when relevant. Share only public game links or PGN/FEN you are comfortable publishing.
+      placeholder: |
+        1. Import this PGN…
+        2. Select move…
+        3. Click…
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Add the exact error or a screenshot if useful.
+    validations:
+      required: true
