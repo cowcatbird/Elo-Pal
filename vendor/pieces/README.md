@@ -10,7 +10,7 @@ The twelve SVGs in `assets/pieces/` are the established **Cburnett** chess-piece
 - Upstream attribution and license: <https://github.com/lichess-org/lila/blob/5b44d719ec5913dd62aa965f4b8d21e60a00c2c1/COPYING.md>
 - Author: <https://en.wikipedia.org/wiki/User:Cburnett>
 
-`manifest.json` records every upstream filename, exact download URL, installed path, byte count, and SHA-256 digest. The SVGs themselves are the complete editable source artwork; no build step is required.
+`provenance.json` records every upstream filename, exact download URL, installed path, byte count, and SHA-256 digest. The SVGs themselves are the complete editable source artwork; no build step is required.
 
 ## License
 

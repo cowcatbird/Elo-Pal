@@ -4,7 +4,7 @@ This directory accompanies the unmodified `stockfish@19.0.1` Lite single-threade
 
 - `stockfish.js-v19.0.1.tar.gz`: complete upstream source at commit `0d5dd7944f88c817c07a26bc4fb1905d5f9c46d6`, tagged `v19.0.1`. Includes the C++ source, JavaScript glue, Makefiles, build scripts, authors, and license notices. No Elo Pal changes are applied to this archive.
 - `nn-61e7af4bb97d.nnue`: the Lite network named by that source's `src/evaluate.h`, obtained from Stockfish's official network endpoint. Its SHA-256 begins with the identifier in its filename.
-- `manifest.json`: original download URLs, source commit, file sizes, SHA-256 digests, and checksums of the shipped engine files.
+- `provenance.json`: original download URLs, source commit, file sizes, SHA-256 digests, and checksums of the shipped engine files.
 - `CC0-1.0.txt`: the network's CC0 dedication. [Fishtest's upload terms](https://github.com/official-stockfish/fishtest/blob/5a8a229a521b4eaab2ecf19b92f0d2fd6c3be13b/server/fishtest/templates/nn_upload.html.j2) require networks uploaded there to be available under CC0. Upstream credits `sscg13` for the Stockfish 19 Lite networks.
 
 ## Rebuilding the Lite single-threaded engine

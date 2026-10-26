@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.8.1 — Chrome Web Store packaging fix
+
+- Renamed third-party provenance files so the ZIP contains only the extension's root `manifest.json`, fixing the “More than one manifest found in package” upload error.
+- Added packaging checks and regression coverage to prevent nested extension manifests from entering a release.
+- Preserved all bundled engine source, artwork attribution, licenses, and checksums.
+
 ## 1.8.0 — Initial public release
 
 ### Game review

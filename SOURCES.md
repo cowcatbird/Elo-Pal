@@ -13,7 +13,7 @@ Elo Pal's release ZIP includes its editable application source and the materials
 
 ## Stockfish source availability
 
-The exact engine source is shipped alongside the engine in every official extension ZIP. It is not necessary to rely on a moving upstream branch or obtain source through a written-offer process. The source archive is pinned to commit `0d5dd7944f88c817c07a26bc4fb1905d5f9c46d6`, the commit behind `v19.0.1`; its matching Lite neural network is also included. [The manifest](vendor/stockfish-source/manifest.json) records source and binary hashes.
+The exact engine source is shipped alongside the engine in every official extension ZIP. It is not necessary to rely on a moving upstream branch or obtain source through a written-offer process. The source archive is pinned to commit `0d5dd7944f88c817c07a26bc4fb1905d5f9c46d6`, the commit behind `v19.0.1`; its matching Lite neural network is also included. [The manifest](vendor/stockfish-source/provenance.json) records source and binary hashes.
 
 If you redistribute Elo Pal or its engine, keep the applicable license notices, complete corresponding source/build materials, and your changes available in accordance with the component licenses. Do not remove the source archive or required network from a binary-only redistribution without arranging another compliant source distribution.
 

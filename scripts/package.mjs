@@ -1,26 +1,11 @@
 // A dependency-free, deterministic ZIP builder for the unpacked Chrome extension.
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { readdir, readFile, mkdir, writeFile } from 'node:fs/promises';
+import { readFile, mkdir, writeFile } from 'node:fs/promises';
 import { deflateRawSync } from 'node:zlib';
+import { collectPackageFiles, assertSingleExtensionManifest } from './package-files.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
-const rootFiles = new Set(['manifest.json', 'background.js', 'README.md', 'CONTRIBUTING.md', 'SECURITY.md', 'PRIVACY.md', 'CHANGELOG.md', 'SOURCES.md', 'THIRD_PARTY_NOTICES.md', 'LICENSE', 'LICENSE.md', 'COPYING', 'package.json', 'package-lock.json']);
-const directories = new Set(['src', 'assets', 'vendor', 'scripts', 'tests', 'docs']);
-const filenames = [];
-
-async function collect(directory = '') {
-  const entries = await readdir(path.join(root, directory), { withFileTypes: true });
-  for (const entry of entries.sort((a, b) => a.name.localeCompare(b.name))) {
-    const relative = directory ? `${directory}/${entry.name}` : entry.name;
-    if (entry.name.startsWith('.')) continue;
-    if (entry.isDirectory() && (directory || directories.has(entry.name))) {
-      await collect(relative);
-    } else if (entry.isFile() && (directory || rootFiles.has(entry.name) || /\.(html|css)$/.test(entry.name))) {
-      filenames.push(relative);
-    }
-  }
-}
 
 const crcTable = Uint32Array.from({ length: 256 }, (_, n) => {
   for (let bit = 0; bit < 8; bit++) n = n & 1 ? 0xedb88320 ^ (n >>> 1) : n >>> 1;
@@ -32,11 +17,12 @@ function crc32(bytes) {
   return (value ^ 0xffffffff) >>> 0;
 }
 
-await collect();
+const filenames = await collectPackageFiles(root);
+assertSingleExtensionManifest(filenames);
 for (const required of ['manifest.json', 'background.js', 'index.html', 'styles.css', 'review-features.css', 'src/app.js', 'src/line-session.js', 'src/move-icons.js', 'src/move-sounds.js', 'src/engine.js', 'src/model.js', 'src/coach.js', 'src/openings.js', 'src/import-session.js', 'src/chesscom-extractor.js', 'src/chesscom-import.js', 'assets/coach-cat.png', 'vendor/chess.js', 'vendor/openings/index.js', 'vendor/openings/provenance.json', 'vendor/openings/source/COPYING.txt']) {
   if (!filenames.includes(required)) throw new Error(`Cannot package an incomplete extension: missing ${required}`);
 }
-for (const required of ['src/lichess-extractor.js', 'src/import-sources.js', 'src/position-advice.js', 'assets/cowcatbird-logo.png', 'SOURCES.md', 'PRIVACY.md', 'CONTRIBUTING.md', 'SECURITY.md', 'CHANGELOG.md', 'vendor/stockfish-source/manifest.json', 'vendor/stockfish-source/README.md']) {
+for (const required of ['src/lichess-extractor.js', 'src/import-sources.js', 'src/position-advice.js', 'assets/cowcatbird-logo.png', 'SOURCES.md', 'PRIVACY.md', 'CONTRIBUTING.md', 'SECURITY.md', 'CHANGELOG.md', 'vendor/stockfish-source/provenance.json', 'vendor/stockfish-source/README.md']) {
   if (!filenames.includes(required)) throw new Error(`Cannot package an incomplete extension: missing ${required}`);
 }
 if (!filenames.some(filename => filename.startsWith('vendor/') && filename.endsWith('.wasm'))) {
@@ -48,7 +34,7 @@ for (const side of ['w', 'b']) {
     if (!filenames.includes(filename)) throw new Error(`Cannot package an incomplete extension: missing ${filename}`);
   }
 }
-for (const filename of ['vendor/pieces/README.md', 'vendor/pieces/manifest.json', 'vendor/pieces/UPSTREAM_COPYING.md', 'vendor/pieces/GPL-2.0.txt']) {
+for (const filename of ['vendor/pieces/README.md', 'vendor/pieces/provenance.json', 'vendor/pieces/UPSTREAM_COPYING.md', 'vendor/pieces/GPL-2.0.txt']) {
   if (!filenames.includes(filename)) throw new Error(`Cannot package without the chess piece attribution: missing ${filename}`);
 }
 const bodies = [];

@@ -11,7 +11,7 @@ body:
     attributes:
       label: Elo Pal version
       description: Find it on Elo Pal's extension card in chrome://extensions.
-      placeholder: 1.8.0
+      placeholder: 1.8.1
     validations:
       required: true
   - type: input

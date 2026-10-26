@@ -1,6 +1,6 @@
 {
   "name": "elo-pal",
-  "version": "1.8.0",
+  "version": "1.8.1",
   "private": true,
   "description": "A private, offline Chrome extension for chess game review.",
   "author": "cowcatbird",

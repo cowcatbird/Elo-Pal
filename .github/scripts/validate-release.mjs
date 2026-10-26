@@ -19,7 +19,7 @@ if (tag !== undefined) {
   assert.equal(tag, `v${pkg.version}`, 'The release tag must match the packaged version.');
 }
 
-const source = await json('vendor/stockfish-source/manifest.json');
+const source = await json('vendor/stockfish-source/provenance.json');
 assert.equal(source.version, pkg.dependencies.stockfish, 'Stockfish source and dependency versions must match.');
 for (const filename of [`stockfish.js-v${source.version}.tar.gz`, 'CC0-1.0.txt']) {
   assert.ok(source.files.some(file => file.path === filename), `Missing source manifest entry: ${filename}`);

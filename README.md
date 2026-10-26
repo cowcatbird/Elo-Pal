@@ -35,7 +35,7 @@ Elo Pal is an independent project. It offers a familiar game-review workflow, bu
 
 The extension opens a full review tab. No account, API key, subscription, build step, or server is required. You can also clone this repository or extract GitHub's source ZIP and load its folder directly; Node.js is not required for installation.
 
-To update, extract the new release into your existing extension folder, click **Reload** on its card in `chrome://extensions`, and refresh any open Elo Pal tabs. Unpacked extensions do not update automatically. Version 1.8.0 uses the same `activeTab`, `scripting`, and `storage` permissions for the import you initiate by clicking the toolbar icon. It has no persistent website permissions.
+To update, extract the new release into your existing extension folder, click **Reload** on its card in `chrome://extensions`, and refresh any open Elo Pal tabs. Unpacked extensions do not update automatically. Version 1.8.1 uses the same `activeTab`, `scripting`, and `storage` permissions for the import you initiate by clicking the toolbar icon. It has no persistent website permissions.
 
 ## One-click import from Chess.com or Lichess
 

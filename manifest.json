@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Elo Pal",
   "short_name": "Elo Pal",
-  "version": "1.8.0",
+  "version": "1.8.1",
   "author": "cowcatbird",
   "description": "Review Chess.com and Lichess games privately with local Stockfish, move grades, and Coach Cat. Import PGN or FEN for free.",
   "minimum_chrome_version": "102",
